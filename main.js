@@ -13,22 +13,25 @@ function toggleDetail(e){
     $(detail).slideToggle()
 }
 
-function onFormSubmit(e){
-    e.preventDefault()
-    const email = $("#inp_email")
-    const subject = $("#inp_subject")
-    const message = $("#inp_message")
+document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-link");
 
-    if(!$(email).val()) {
-        alert("Email is required")
-    } else if(!$(subject).val()) {
-        alert("Subject is required")
-    } else if(!$(message).val()) {
-        alert("Message is required")
-    } else {
-        $(email).val("")
-        $(subject).val("")
-        $(message).val("")
-        alert("Form Submitted")
-    }
-}
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach((link) => {
+                        link.classList.remove("active");
+                        if (link.getAttribute("href").substring(1) === entry.target.id) {
+                            link.classList.add("active");
+                        }
+                    });
+                }
+            });
+        },
+        { threshold: 0.5 }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+});

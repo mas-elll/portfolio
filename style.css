@@ -19,6 +19,25 @@ section::before {
 .navbar {
     background-color: white;
     box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.25);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black;
+    font-weight: normal;
+}
+
+.nav-link.active {
+    font-weight: bold;
 }
 
 .home h1 {
@@ -40,7 +59,11 @@ section::before {
     color: white;
 }
 
-.home .arrow {
+.home img {
+    width: 100%;
+}
+
+.home .arrow img{
     width: 60px;
 }
 
@@ -141,6 +164,19 @@ section::before {
     border: 1px solid black;
     border-radius: 5%;
     padding: 64px 32px;
+}
+
+@media only screen and (max-width: 768px) {
+    .home img {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 5768px){
+    section::before {
+        left: -10px;
+        font-size: 64px;
+    }
 }
 
 @keyframes UpDown {

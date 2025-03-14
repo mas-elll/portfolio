@@ -17,16 +17,16 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="#home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="#about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Project</a>
+                    <a class="nav-link" href="#work">Project</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="#contact">Contact</a>
             </li>
             </ul>
         </div>
@@ -35,26 +35,26 @@
 
     <!-- home -->
     <section id="home" class="home container">
-        <div class="row d-flex align-items-center">
-            <div class="col-8">
+        <div class="row d-flex align-items-center flex-md-row flex-column-reverse">
+            <div class="col-12 col-md-8">
                 <h3 class="fw-semibold">Hi! I am</h3>
                 <h1 class="fw-bold">Nail Dhiyaul Haq</h1>
                 <p>I am Web Developer based in Indonesia</p>
-                <a class="btn button" href="img/potrait.png" download>Resume</a>
+                <a class="btn button" href="assets/CV_Nail Dhiyaul Haq.pdf" download>Resume</a>
             </div>
-            <div class="col-4">
+            <div class="col-12 col-md-4 d-flex justify-content-md-end justify-content-center">
                 <img src="img/potrait.png" alt="potrait">
             </div>
         </div>
-        <div class="arrow w-100 d-flex align-items-center flex-column mt-5">
-            <a class="text-decoration-none text-dark" href="#about">More Info</a>
+        <a class="text-decoration-none arrow w-100 d-flex align-items-center flex-column mt-5" href="#about">
+            <div class="text-dark" >More Info</div>
             <img id="arrow" class="mt-2" src="img/arrow.svg" alt="arrow icon">
-        </div>
+        </a>
     </section>
 
     <!-- about -->
     <section id="about" class="about container">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores repellat illo mollitia a facere iure officiis laudantium quidem alias saepe architecto perferendis repellendus ducimus praesentium, odio fugit ut qui? Praesentium atque rerum accusantium libero vero in ipsa ex asperiores, saepe, labore ducimus laudantium animi ipsum sapiente impedit sequi, nihil tempore!</p>
+        <p>Lulusan Informatika dari Universitas Ahmad Dahlan dengan pengalaman sebagai Front-End Developer dan UI/UX Designer. Berpengalaman dalam pengembangan aplikasi berbasis web dan mobile menggunakan teknologi modern seperti Laravel, HTML, CSS, JavaScript, dan Figma. Memiliki keterampilan komunikasi, kepemimpinan, dan kerja tim yang kuat. Siap berkontribusi dalam proyek pengembangan perangkat lunak yang inovatif.</p>
         <div class="about-exp">
             <div class="about-exp-items">
                 <div class="about-exp-items-header">
@@ -81,11 +81,11 @@
 
     <!-- project -->
     <section id="work" class="work container">
-        <div class="row d-flex align-items-center gap-5">
-            <div class="col">
+        <div class="row d-flex align-items-center gap-5 mt-5">
+            <div class="col-12 col-md-5">
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea explicabo nam assumenda quibusdam ipsam sint doloribus autem tempora, consequuntur culpa velit asperiores eius, distinctio tempore facilis praesentium! Perspiciatis nihil iste earum ipsa! Quos cumque ut obcaecati quod id repudiandae sunt, nisi alias velit minima ratione doloribus laborum, delectus exercitationem sapiente.</p>
             </div>
-            <div class="col work-img">
+            <div class="col-12 col-md-6 work-img">
                 <div id="work-1" class="work-img-item">
                     <img src="img/work-1.png" alt="Work 1" >
                 </div>
@@ -100,43 +100,27 @@
         
     </section>
 
+    <!-- contact -->
     <section id="contact" class="contact container">
         <div class="row d-flex align-items-center gap-5">
-            <div class="col">
+            <div class="col-12 col-lg-6">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum ab odit aliquam consequatur, reprehenderit in assumenda. Ducimus, expedita aliquid et ratione ipsa odit itaque, facere, maiores voluptas repellat veritatis omnis est! Optio quisquam quibusdam dolor quos, deserunt tenetur qui, consectetur libero accusamus hic at cum repudiandae? Exercitationem repellat voluptate recusandae.</p>
-                <div class="row">
+            </div>
+            <div class="col-12 col-lg-5">
+                <div class="row align-items-start">
                     <div class="col d-flex align-items-center">
-                        <img src="img/Instagram.svg" alt="Instragram Icon">
-                        <p>@naildhiya</p>
+                        <img class="w-25" src="img/Instagram.svg" alt="Instragram Icon">
+                        <p class="mb-0 ms-2">@naildhiya</p>
                     </div>
                     <div class="col d-flex align-items-center">
-                        <img src="img/LinkedIn.svg" alt="LinkedIn Icon">
-                        <p>Nail Dhiyaul Haq</p>
+                        <img class="w-25" src="img/LinkedIn.svg" alt="LinkedIn Icon">
+                        <p class="mb-0 ms-2">Nail Dhiyaul Haq</p>
                     </div>
                     <div class="col d-flex align-items-center">
-                        <img src="img/Email.svg" alt="Email Icon">
-                        <p>naildhiya99@gmail.com</p>
+                        <img class="w-25" src="img/Email.svg" alt="Email Icon">
+                        <p class="mb-0 ms-2">naildhiya99@gmail.com</p>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <form class="contact-form" onsubmit="onFormSubmit(event)">
-                    <div class="mb-3">
-                        <label for="inp_email" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="inp_email" placeholder="example@gmail.com">
-                    </div>
-                    <div class="mb-3">
-                        <label for="inp_subject" class="form-label">Subject</label>
-                        <input type="text" class="form-control" id="inp_subject" placeholder="Your Subject">
-                    </div>
-                    <div class="mb-3">
-                        <label for="inp_message" class="form-label">Password</label>
-                        <input type="text" class="form-control" id="inp_message" placeholder="Your Message">
-                    </div>
-                    <div class="d-flex justify-content-center mt-5">
-                        <button type="submit" class="btn button">Submit</button>
-                    </div>                    
-                </form>
             </div>
         </div>
     </section>
